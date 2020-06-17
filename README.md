@@ -1,15 +1,13 @@
 # Rails Sandbox
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Sandbox for learning and trying out new stuff, using Rails 6, Webpacker and Elm.
 
-Things you may want to cover:
-
-* Ruby version
+* Ruby version - see Gemfile
 
 * System dependencies
 
 * Configuration
+  - sqlite initially, may change later.
 
 * Database creation
 
@@ -20,5 +18,3 @@ Things you may want to cover:
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
-
-* ...

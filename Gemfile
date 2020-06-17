@@ -30,6 +30,11 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'devise', '~> 4.7.1'
+# gem 'devise-jwt','~> 0.7'
+gem 'omniauth-github', github: 'omniauth/omniauth-github', branch: 'master'
+
+  # gem 'rails_upgrader',  git: 'https://github.com/koctya/rails_upgrader.git'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
