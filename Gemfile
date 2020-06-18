@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.5'
+# Autoload dotenv in Rails. (https://github.com/bkeepers/dotenv)
+gem "dotenv-rails"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 # Full-stack web application framework. (https://rubyonrails.org)
@@ -30,8 +32,10 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+# Flexible authentication solution for Rails with Warden (https://github.com/plataformatec/devise)
 gem 'devise', '~> 4.7.1'
 # gem 'devise-jwt','~> 0.7'
+# Official OmniAuth strategy for GitHub. (https://github.com/intridea/omniauth-github)
 gem 'omniauth-github', github: 'omniauth/omniauth-github', branch: 'master'
 
   # gem 'rails_upgrader',  git: 'https://github.com/koctya/rails_upgrader.git'
@@ -53,6 +57,8 @@ group :development, :test do
   gem 'pry-byebug'
   # RSpec for Rails (https://github.com/rspec/rspec-rails)
   gem 'rspec-rails'
+  # factory_bot_rails provides integration between factory_bot and rails 4.2 or newer (https://github.com/thoughtbot/factory_bot_rails)
+  gem 'factory_bot_rails'
   # Better error page for Rails and other Rack apps (https://github.com/BetterErrors/better_errors)
   gem 'better_errors'
   # Retrieve the binding of a method's caller. Can also retrieve bindings even further up the stack. (http://github.com/banister/binding_of_caller)
@@ -70,4 +76,9 @@ group :development do
   gem 'spring'
   # Makes spring watch files using the listen gem. (https://github.com/jonleighton/spring-watcher-listen)
   gem 'spring-watcher-listen', '~> 2.0.0'
+  # Easily generate fake data (https://github.com/faker-ruby/faker)
+  gem 'faker', require: false # for sample data in development
+  # rspec command for spring (https://github.com/jonleighton/spring-commands-rspec)
+  gem 'spring-commands-rspec'
+  gem 'annotate'
 end

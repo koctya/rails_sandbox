@@ -31,3 +31,7 @@
 
 en:
   hello: "Hello world"
+  user_mailer:
+    invite:
+      subject: Welcome
+      body: To confirm your email, please visit %{confirmation_url}
