@@ -1,0 +1,9 @@
+%h1 Welcome to Projects
+
+%p Hello #{@user.first_name},
+
+= t(".body", confirmation_url: confirmation_url(token: @user.token))
+
+%p
+  Use the email address
+  #{@user.email} to sign in or reset your password in the future.

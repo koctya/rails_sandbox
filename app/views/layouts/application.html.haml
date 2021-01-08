@@ -9,6 +9,25 @@
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag "hello_elm"
   %body
-    .notice= notice
-    .alert= alert
-    = yield
+    %nav.navbar.navbar-inverse
+      .container
+        .navbar-header
+          .navbar-brand= link_to 'Rails Sandbox', root_path
+        #navbar
+          %ul.nav.navbar-nav.pull-right
+            %li.navbar-link.strong= link_to 'Users', users_path
+            - if user_signed_in?
+              %li.navbar-link.strong= link_to current_user.email, current_user
+              %li.navbar-link= link_to 'Edit profile', edit_user_registration_path(current_user)
+              %li.navbar-link= link_to 'Log Out', destroy_user_session_path, method: :delete
+            - else
+              %li.navbar-link= link_to 'Log In', new_user_session_path
+              %li.navbar-link= link_to 'Sign Up', new_user_registration_path
+
+    - flash.each do |name, msg|
+      .alert{:class => "alert-#{name}"}= content_tag :div, msg, id: "flash_#{name}"
+
+    = yield :top_content
+    .container
+      %h1= yield :header
+      = yield

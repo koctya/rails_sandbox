@@ -1,0 +1,35 @@
+%h2 Change your password
+
+= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f|
+  = render "devise/shared/error_messages", resource: resource
+  = f.hidden_field :reset_password_token
+
+  .field
+    = f.input :username
+    %br
+    =# f.username_field :username, autofocus: true, autocomplete: "username" %>
+
+  .field
+    = f.input :email, disabled: true, hint: 'You cannot change your email.'
+    %br
+
+  .field
+    = f.input :first_name
+    %br
+
+  .field
+    = f.input :last_name
+    %br
+
+  .field
+    = f.label :password, "New password"
+    = f.password_field :password, autofocus: true
+
+  .field
+    = f.label :password_confirmation, "Confirm new password"
+    = f.password_field :password_confirmation
+
+  .actions
+    = f.submit "Set my password"
+
+= render "devise/shared/links"

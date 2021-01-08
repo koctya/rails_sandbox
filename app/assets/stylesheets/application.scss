@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+//  @import 'bootstrap/scss/bootstrap';
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+ @import 'bootstrap/theme';
+//  @import 'home';
+
+ .alert-alert {
+   @extend .alert-warning;
+ }
+
+ .alert-notice {
+   @extend .alert-info;
+ }

@@ -1,0 +1,10 @@
+%h1 Home
+
+%h4 Registered Users
+%ul
+  - @users.each do |user|
+    %li
+      = user.email
+      -# = link_to user.email, user
+      - if user_signed_in?
+        -# %span.online Online since #{user.current_logged_in_at.localtime}

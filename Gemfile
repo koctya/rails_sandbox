@@ -17,8 +17,10 @@ gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
 # Sass adapter for the Rails asset pipeline. (https://github.com/rails/sass-rails)
 gem 'sass-rails', '>= 6'
+gem 'bootstrap-sass'
 # let your Gemfile do the configuring (https://github.com/indirect/haml-rails)
 gem 'haml-rails'
+gem 'simple_form'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 # Use webpack to manage app-like JavaScript modules in Rails (https://github.com/rails/webpacker)
 gem 'webpacker', '~> 4.0'

@@ -2,6 +2,11 @@
 
 Sandbox for learning and trying out new stuff, using Rails 6, Webpacker and Elm.
 
+## Devise configuration
+
+Devise configured for confirmable, and set password after confirmation email.
+
+## Other stuff
 * Ruby version - see Gemfile
 
 * System dependencies
